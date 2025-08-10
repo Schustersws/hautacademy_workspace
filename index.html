@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haut Academy Workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'haut-dark': '#0F0F0F',
+                        'haut-surface': '#1a1a1a',
+                        'haut-border': '#2a2a2a',
+                        'haut-text': '#f5f5f5',
+                        'haut-muted': '#a0a0a0',
+                        'haut-accent': '#FFD11A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            'from': { opacity: 0 },
+                            'to': { opacity: 1 },
+                        },
+                        slideIn: {
+                            'from': { transform: 'translateY(10px)', opacity: 0 },
+                            'to': { transform: 'translateY(0)', opacity: 1 },
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 0.3s ease-in-out',
+                        slideIn: 'slideIn 0.3s ease-in-out',
+                    }
+                },
+            },
+            plugins: [],
+        }
+    </script>
+    <style>
+        :root {
+            --color-bg: #0f0f0f;
+            --color-surface: #1a1a1a;
+            --color-border: #2a2a2a;
+            --color-text: #f5f5f5;
+            --color-text-muted: #a0a0a0;
+            --color-accent: #ffd11a;
+        }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--color-surface);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-accent);
+        }
+        *:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.8.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.539.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-haut-dark">
+<div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
